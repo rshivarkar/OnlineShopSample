@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+
+
+</script>
+
+<style>
+*{margin:0;}
+html, body{
+  height:100%;
+}
+#top{
+  position:fixed;
+  width:100%;
+  height:50px; /* See #wrapper bottom value */
+  background:#ddd;
+}
+#wrapper{
+  position:absolute;
+  width:100%;
+  bottom:0;
+  top:50px; /* compensate #top height */ 
+}
+
+#right{
+  position:absolute;
+  right:0;
+  left:150px; /* compensate #left width */
+  bottom:0;
+  height:100%;
+  background:#EE9B69;
+}
+#header{
+  position:fixed;
+  width:100%;   /* (100% cause of fixed pos) */
+  height:30px;  /* see #page top value */
+  background:#F8C301;
+}
+#page{
+  position:absolute;
+  top:30px;    /* header height */
+  bottom:30px; /* bottom height */
+  width:100%;
+  overflow-y:scroll;
+} 
+#footer{
+  background:#B8DC7C;
+  position:fixed;
+  width:100%; /* (100% cause of fixed) */
+  bottom:0;
+  height:30px; /* see #page bottom value */
+}
+
+/* DEMO ONLY */
+p.long{
+  height:1500px;
+  border-left:5px dotted #000;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
+
+</head>
+<body >
+<div id=top>TOP</div>
+
+<div id=wrapper>
+  
+  <div id=left>
+    left side
+  </div>
+
+  <div id=right>
+    <div id=header>
+	<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+	</div>
+    <div id=page>
+      ARTICLE CONTENT<p class=long>Long content test</p>--END!
+    </article>
+    <div id=footer>FOOTER</div>
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>

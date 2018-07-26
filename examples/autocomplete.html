@@ -1,0 +1,190 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Autocomplete - Custom data and display</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #project-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  #project-icon {
+    float: left;
+    height: 32px;
+    width: 32px;
+  }
+  #project-description {
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+  
+
+  
+    <script type="text/javascript" src="data.json"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	
+  <script>
+function load() {
+  
+   $(document).ready(function ()
+    {
+  var mydata = JSON.parse(data);
+  
+  var harddata = [
+      { label: "Milk" },
+      { label: "Wheat" },
+      { label: "Brinjal" }
+  ];
+    var projects = [
+      {
+       // value: "jquery",
+        label: "jQuery",
+        desc: "the write less, do more, JavaScript library",
+        icon: "jquery_32x32.png"
+      },
+      {
+      //  value: "jquery-ui",
+        label: "jQuery UI",
+        desc: "the official user interface library for jQuery",
+        icon: "jqueryui_32x32.png"
+      },
+      {
+      //  value: "sizzlejs",
+        label: "Sizzle JS",
+        desc: "a pure-JavaScript CSS selector engine",
+        icon: "sizzlejs_32x32.png"
+      },
+       {
+           //  value: "sizzlejs",
+           label: "potato",
+           desc: "a pure-JavaScript CSS selector engine",
+           icon: "sizzlejs_32x32.png"
+       },
+        {
+            //  value: "sizzlejs",
+            label: "red-potato",
+            desc: "a pure-JavaScript CSS selector engine",
+            icon: "sizzlejs_32x32.png"
+        },
+        {
+            //  value: "sizzlejs",
+            label: "brinjal",
+            desc: "a pure-JavaScript CSS selector engine",
+            icon: "sizzlejs_32x32.png"
+        }
+    ];
+ 
+    $( "#project" ).autocomplete({
+      minLength: 0,
+      source: projects,
+      focus: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+        return false;
+      },
+      select: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+        return false;
+      }
+    })
+    .autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $( "<li>" )
+        .append( "<div>" + item.label + "<br>" + item.desc + "</div>" )
+        .appendTo( ul );
+    };
+	
+	
+	    $( "#txtsearchProduct" ).autocomplete({
+      minLength: 0,
+      source: harddata,
+      focus: function( event, ui ) {
+          $("#txtsearchProduct").val(ui.item.label);
+        return false;
+      },
+      select: function( event, ui ) {
+          $("#txtsearchProduct").val(ui.item.label);
+        return false;
+      }
+    })
+    .autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $( "<li>" )
+        .append("<div>" + item.label + "<br>" + item.label + "</div>")
+        .appendTo( ul );
+    };
+	
+  } );
+     }
+
+  </script>
+</head>
+<body onload="load()">
+
+    <div id="project-label">Select a project (type "j" for a start):</div>
+  
+    <input id="project">
+    <input type="hidden" id="project-id">
+    <p id="project-description"></p>
+
+
+    <div class="row">
+
+        <div class="col-md-8">
+            <!-- <nav class="navbar navbar-expand-sm navclass" style="align-content:center">-->
+            <nav class="navbar navbar-toggleable-md navbar-rup navbar-fixed-top">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">.</a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Vegetables
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item cls_category_menu" href="#" data-target="AllVegetables">All</a>
+                                <a class="dropdown-item cls_category_menu" href="#" data-target="Red">Red</a>
+                                <a class="dropdown-item cls_category_menu" href="#" data-target="Green">Green</a>
+                                <a class="dropdown-item cls_category_menu" href="#" data-target="leafy">leafy</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link cls_category_menu" href="#">Fruits</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Other
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item cls_category_menu" href="#" data-target="Milk">Milk Products</a>
+                                <a class="dropdown-item cls_category_menu" href="#" data-target="Wheat">Wheat Products</a>
+                                <a class="dropdown-item cls_category_menu" href="#" data-target="AboutUs">About us</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-4">
+            <input type="text" name="fname" id="txtsearchProduct" class="SearchBox" placeholder="search product" /> <img alt="Mountain View" id="btnSearchProduct">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RajFresh</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+    <!-- <link href="css/MyStyle.css" rel='stylesheet' type='text/css' />-->
+    <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/MyStyle.css" />
+    <script type="text/javascript" src="data.json"></script>
+    <!--<script type="text/javascript" src="JavaScripts/js.cookie.js"></script>-->
+    <script type="text/javascript" src="myscript.js"></script>
+    <script type="text/javascript" src="JavaScripts/useraccount.js"></script>
+    <script type="text/javascript" src="JavaScripts/products.js"></script>
+    <script type="text/javascript" src="JavaScripts/cart.js"></script>
+    <script type="text/javascript" src="JavaScripts/util.js"></script>
+    <script type="text/javascript" src="JavaScripts/myorders.js"></script>
+
+</head>
+<body onload="load()">
+
+
+    
+
+
+
+    <div class="container-fluid">
+
+        <div class="row ">
+            <div class="col colHeader">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div id="google_translate_element"></div>
+                            <script>
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement(
+                                        { pageLanguage: 'en', includedLanguages: 'mr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+                                        'google_translate_element'
+                                    );
+                                }
+                            </script>
+                            <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                        </div>
+                        <div class="col-md-3">
+                            <img alt="Mountain View" id="imagelogo">
+                        </div>
+
+                        <div class="col-md-5">
+
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-1 cls_Cart" id="idCartDiv">
+                            <div class="row">
+                                <div align="right">
+                                    <img src="images/cart.PNG" alt="Mountain View" id="ImageCart">
+                                </div>
+                                <div align="left">
+                                    <div>
+                                        <span>Total:<label id="idcartTotal"></label></span>
+                                        <br />
+                                        <span>Items:(<label id="idcartItems"></label>)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <marquee style="font-size:larger;font-style:italic;color:blue" behavior="scroll" bgcolor="#00CCCC" loop="-1" width="100%" height="40px" id="">RajFresh  - Fresh Fruits and Vegetables</marquee>-->
+
+                    <div class="row" style="background-color:aliceblue;" >
+
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-8">
+                           
+                            <div class="row">
+
+                                <div class="col-md-8">
+                                    <!-- <nav class="navbar navbar-expand-sm navclass" style="align-content:center">-->
+                                    <nav class="navbar navbar-toggleable-md navbar-rup navbar-fixed-top">
+                                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="#">.</a>
+
+                                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                            <ul class="navbar-nav mr-auto">
+                                                  <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                                        Vegetables
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item cls_category_menu" href="#" data-target="AllVegetables">All</a>
+                                                        <a class="dropdown-item cls_category_menu" href="#" data-target="Red">Red</a>
+                                                        <a class="dropdown-item cls_category_menu" href="#" data-target="Green">Green</a>
+                                                        <a class="dropdown-item cls_category_menu" href="#" data-target="leafy">leafy</a>
+                                                    </div>
+                                                </li>
+
+                                                <li class="nav-item">
+                                                    <a class="nav-link cls_category_menu" href="#">Fruits</a>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                                        Other
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item cls_category_menu" href="#" data-target="Milk">Milk Products</a>
+                                                        <a class="dropdown-item cls_category_menu" href="#" data-target="Wheat">Wheat Products</a>
+                                                        <a class="dropdown-item cls_category_menu" href="#" data-target="AboutUs">About us</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="fname" id="txtsearchProduct" class="SearchBox" placeholder="search product" /> <img alt="Mountain View" id="btnSearchProduct">
+                                </div>
+                                </div>
+
+                            </div>
+                       
+                            <div class="col-md-2">
+
+
+                                <nav class="navbar navbar-toggleable-md navbar-rup navbar-fixed-top">
+                                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarlogin" aria-controls="navbarlogin" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">.</a>
+
+                                    <div class="collapse navbar-collapse" id="navbarlogin">
+                                        <ul class="navbar-nav mr-auto">
+
+                                            <li class="nav-item dropdown" id="iduserlogindropdown" style="display:none">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                                    <img src="images/user.jpg" alt="My Account" data-toggle="tooltip" data-placement="bottom" id="idImageUser">
+                                                </a>
+
+
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item cls_category_menu" href="#" data-target="myorders">My Orders</a>
+                                                    <a class="dropdown-item cls_category_menu" href="#" data-target="myprofile">My Profile</a>
+                                                    <a class="dropdown-item cls_category_menu" href="#" data-target="logout">Logout</a>
+                                                </div>
+                                            </li>
+
+                                            <li class="nav-item" id="idloginlink">
+                                                <a class="nav-link" href="#" data-target="#idloginmodal" data-toggle="modal">Login</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link cls_category_menu" href="#" data-target="register">Register</a>
+                                            </li>
+
+
+
+                                        </ul>
+                                    </div>
+                                </nav>
+</div>
+
+
+                        </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="container-fluid" id="idDivMain">
+            <!-- Or let Bootstrap automatically handle the layout -->
+            <!--Header-->
+            <!--Products-->
+            <div class="row" id="divProdRow">
+
+                <div class="col-md-2">
+                    <div class="divsearch">
+                          Category :</br>
+                        <input type="checkbox" class="cls_category" value="Red" checked /> Red
+                        </br>
+                        <input type="checkbox" class="cls_category" value="Green" checked /> Green
+                        </br>
+                        <input type="checkbox" class="cls_category" value="leafy" checked /> leafy
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="popular-restaurents">
+                        <div class="container-fluid">
+                            <div class="ProductsDiv">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div id="idDivCartTable1" style="display:none">
+                        <table id="carttable1" class="" border='1' style="height: 100%;width:100%">
+                            <thead>
+                                <tr>
+                                    <th colspan='4'>
+                                        <strong>RajFresh Shopping Cart</strong><span class='jcart-items'></span>
+                                    </th>
+
+                                <tr style="background-color:green;color:white">
+                                    <th>Name</th>
+                                    <th>Image</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr style="background-color:green;color:white">
+                                    <th colspan='4'>
+                                        <strong>Total:<img src='images/r.png' style='width:9px;' /></strong><span class='jcart-total'></span>
+                                    </th>
+                                </tr>
+                            </tfoot>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!--Cart-->
+
+        <div class="container-fluid" id="iddivCartDetails" style="display:none">
+            <div class="row">
+                <div class="col-md-2" id="idFadeOutDiv">
+                    Reserved
+                    
+                </div>
+                <div class="col-md-8">
+
+                    <div>
+                    </br>
+                          
+                        <a href="#" class="clsBackToProducts">Continue Shopping</a>
+                        </br>
+                        <a href="#" class="CheckoutLink" id="idcheckout">Checkout</a>
+                    </div>
+                    
+                    
+
+                    <div id="iddivcheckout"></div>
+
+                    <div id="idDivCartTable">
+                        <table id="carttable" class="table-responsive carttablecls" border='1'>
+                            <thead>
+                                <tr>
+                                    <th colspan='4'>
+                                        <strong id='jcart-title'>RajFresh Shopping Cart</strong><span class='jcart-items'></span>
+                                    </th>
+
+                                <tr style="background-color:green;color:white">
+                                    <th>Name</th>
+                                    <th>Image</th>
+                                    <th>Price</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr style="background-color:green;color:white">
+                                    <th colspan='4'>
+
+                                        <strong id=''>Total:<img src='images/r.png' style='width:9px;' /></strong><span class='jcart-total'></span>
+                                    </th>
+                                </tr>
+                            </tfoot>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    Reserved
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid" id="iddivAboutus" style="display:none">
+            Write about Us Here.
+        </div>
+
+        <!--<div class="container-fluid" id="iddivmyorders" style="display:none">
+           
+        </div>-->
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8" id="iddivmyorders" style="display:none">
+
+            </div>
+
+            <div class="col-md-2">
+
+            </div>
+        </div>
+
+        <div id="iddivProdDetail" style="display: none; padding-top: 1em; border: groove">
+            <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8" id="iddivProdDetailInner">
+
+                </div>
+
+                <div class="col-md-2">
+
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="row">
+            <div class="col colFooter" style="align-content:center">Copyright &copy; RajFresh.com</div>
+            <footer></footer>
+        </div>
+
+
+
+    </div>
+
+    <!--Modal Dialogs-->
+    <div id="idloginmodal" class="modal">
+
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+               
+                <div class="modal-body">
+
+                    <div class="login-panel panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Sign In</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="" id="idemailaddress" value="rshivarkar@gmail.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Password" name="password" type="password" id="idpassword" value="test">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                        </label>
+                                    </div>
+                                    <!-- Change this to a button or input when using this as a form -->
+                                    <a href="javascript:;" class="btn btn-sm btn-success"id="btnlogin">Login</a>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="btnclose">Close</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

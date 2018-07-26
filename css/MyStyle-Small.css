@@ -1,0 +1,180 @@
+/*.colHeader
+{
+    background-color:aliceblue
+}*/
+.navbar-rup .navbar-brand,
+.navbar-rup .navbar-toggler {
+  color: rgba(0, 0, 0, 0.9);
+}
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+
+
+.navbar-rup .navbar-brand:focus, .navbar-rup .navbar-brand:hover,
+.navbar-rup .navbar-toggler:focus,
+.navbar-rup .navbar-toggler:hover {
+ color: green; font-family:Arial;font-weight:bold
+}
+.navbar-rup .dropdown-item:hover
+{
+     color: green; font-family:Arial;font-weight:bold
+}
+.navbar-rup .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-rup .navbar-nav .nav-link:focus, .navbar-rup .navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 0, 0.7);color: green; font-family:Arial;font-weight:bold
+}
+
+.navbar-rup .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-rup .navbar-nav .open > .nav-link,
+.navbar-rup .navbar-nav .active > .nav-link,
+.navbar-rup .navbar-nav .nav-link.open,
+.navbar-rup .navbar-nav .nav-link.active {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-rup .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-rup .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-rup .navbar-text {
+  color: rgba(0, 0, 0, 0.5);
+}
+.colHeader
+{
+    background-color:aliceblue
+}
+.navbar
+{
+      background-color: aliceblue;
+}
+nav a:link, nav a:visited, nav a:active { color: blue;font-family:'Arial Rounded MT' ;font-weight:100}
+nav a:hover { color: green; font-family:Arial;font-weight:bold}
+nav a.active { background-color: red; }
+.colFooter 
+{
+    background-color: aliceblue;
+}
+
+.divsearch 
+{
+    background-color: aliceblue;
+}
+
+#carttable
+{
+     /*background-color: blue;*/
+     font-size:smaller;
+     
+}
+/*div > img {
+  width: auto;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
+}*/
+
+/*.heightwidth {
+    height:10px;
+    width:100px;
+}*/
+
+.popular-restaurents{
+	padding:0 0;
+	background: #fff;
+     /*background-color:blue;*/
+      align-content:center;
+}
+
+.cart-class{
+	padding:1em 1em 4em 5em;
+	background: #fff;
+    background-color:aliceblue;
+}
+
+.top-cuisine-grid {
+	/*width: 24%;*/
+	/*float: left;
+	margin:0 1% 2% 0;*/
+    align-content:center;
+     background-color:aliceblue;
+}
+.prod-details
+{
+     margin-top:auto;
+    margin-bottom:auto;
+    text-align:center;
+}
+.Image-Class
+{
+  align-content:center;
+   border-image-width:10px;
+  background-color:blue;
+  border-image-outset:3px;
+  animation-duration:4s;
+  width:100%;
+}
+
+
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position:absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}

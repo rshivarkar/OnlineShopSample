@@ -1,0 +1,366 @@
+/*.colHeader
+{
+    background-color:aliceblue
+}*/
+*{margin:0;}
+html, body{
+  height:100%;
+}
+#top{
+  position:fixed;
+  width:100%;
+  height:70px; /* See #wrapper bottom value */
+  /*background:#ddd;*/
+}
+#wrapper{
+  position:absolute;
+  width:100%;
+  bottom:0;
+  top:70px; /* compensate #top height */ 
+}
+#left{
+  position:absolute;
+  background: aliceblue;
+  height:100%;
+  width:150px;   /* See #right left value */
+  overflow:auto; /* make scrollable if content overflows */
+   /*top:80px;    /* header height */*/
+}
+#right{
+  position:absolute;
+  right:0;
+  left:150px; /* compensate #left width */
+  bottom:0;
+  height:100%;
+  /*background:#EE9B69;*/
+}
+#header{
+  position:absolute;
+  width:100%;   /* (100% cause of fixed pos) */
+  height:60px;  /* see #page top value */
+  /*background:#F8C301;*/
+}
+#page{
+  position:absolute;
+  top:80px;    /* header height */
+  bottom:30px; /* bottom height */
+  width:100%;
+  overflow-y:scroll;
+} 
+#footer{
+  background:#B8DC7C;
+  position:fixed;
+  width:100%; /* (100% cause of fixed) */
+  bottom:0;
+  height:30px; /* see #page bottom value */
+}
+
+
+#wrapper1{
+  position:fixed;
+  width:100%;
+  bottom:0;
+  top:50px;  
+
+  /*compensate #top height */
+}
+#left1{
+  position:absolute;
+  background: aliceblue;
+  height:100%;
+  width:150px;   /* See #right left value 
+  overflow:auto;  make scrollable if content overflows 
+   top:80px;    /* header height */
+}
+#rightmost1{
+  position:relative;
+  /*background: aliceblue;*/
+  height:100%;
+  width:200px;   /* See #right left value 
+  overflow:auto;  make scrollable if content overflows 
+   top:80px;    /* header height */
+  float:right;
+}
+
+#header1{
+  position:absolute;
+  width:100%;   /* (100% cause of fixed pos) */
+  height:60px;  /* see #page top value */
+  /*background:#F8C301;*/
+}
+#right1{
+  position:absolute;
+  right:0;
+  left:150px; /* compensate #left width */
+  bottom:0;
+  height:100%;
+  /*background:#EE9B69;*/
+}
+#page1{
+  position:absolute;
+  top:10px;    /* header height */
+  bottom:30px; /* bottom height */
+  width:100%;
+  overflow-y:scroll;
+} 
+
+.SearchBox {
+    width:auto;
+    height:auto;
+    background-color: white;
+    color:black;
+    margin:0 auto;
+  margin-left:5px;
+
+}
+
+.SearchBox > div {
+    margin:0 auto;
+    width:auto;
+}
+
+input[type="text"] {
+    margin:10px auto;
+}
+
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+
+
+.navbar-rup .navbar-brand,
+.navbar-rup .navbar-toggler {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-rup .navbar-brand:focus, .navbar-rup .navbar-brand:hover,
+.navbar-rup .navbar-toggler:focus,
+.navbar-rup .navbar-toggler:hover {
+ color: green; font-family:Arial;font-weight:bold
+}
+.navbar-rup .dropdown-item:hover
+{
+     color: green; font-family:Arial;font-weight:bold
+}
+.navbar-rup .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+.navbar-rup .navbar-nav .nav-link {
+   color: green; font-family:Arial;font-weight:100
+}
+.navbar-rup .dropdown-item
+{
+      color: green; font-family:Arial;font-weight:100
+}
+
+.navbar-rup .navbar-nav .nav-link:focus, .navbar-rup .navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 0, 0.7);color: green; font-family:Arial;font-weight:bold
+}
+
+.navbar-rup .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-rup .navbar-nav .open > .nav-link,
+.navbar-rup .navbar-nav .active > .nav-link,
+.navbar-rup .navbar-nav .nav-link.open,
+.navbar-rup .navbar-nav .nav-link.active {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-rup .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-rup .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-rup .navbar-text {
+  color: rgba(0, 0, 0, 0.5);
+}
+body
+{
+      /*background-color: #b6e18c*/
+        
+}
+.navbar
+{
+      /*background-color: aliceblue;*/
+}
+
+
+.colFooter 
+{
+   background: #aaa;color:white;
+}
+
+.divsearch 
+{
+    background-color:aliceblue
+}
+.clsfeedbackbtn
+{
+    border-color: green;
+}
+.clsfeedbackbtn:hover
+{
+    border-color: green;
+    cursor:pointer;
+}
+.add-to-cart:hover
+{
+     border-color: black;
+    cursor:pointer;
+}
+.ordertable tr:hover
+{
+    border-color: green;
+    background-color:#d9efb3;
+
+}
+.ordertable 
+{
+    font-size:small;
+    font-family:'Trebuchet MS'
+      
+}
+.carttablecls
+{
+     background-color: aliceblue;
+     /*font-size:smaller;*/
+     
+}
+
+.carttablecls tr th
+{
+     background-color: green;
+     color:white
+     
+}
+
+.popular-restaurents{
+	padding:0 0;
+	background: #fff;
+}
+
+.cart-class{
+	padding:1em 1em 4em 5em;
+	background: #fff;
+    background-color:aliceblue;
+}
+
+.top-cuisine-grid:hover
+{
+box-shadow:0px 0px 5px #CCC;
+background-color:lightgreen;
+}
+
+.top-cuisine-grid:hover a
+{
+color:#F00;
+}
+.top-cuisine-grid:hover strong
+{
+color:#61A743;
+}
+
+.Image-Class:hover
+{
+    cursor: pointer;
+}
+.myimagediv
+{
+    background-color:white;
+}
+
+.cls_Cart:hover
+{
+box-shadow:0px 0px 5px #CCC;
+cursor: pointer;
+background-color:#edf6ec;
+}
+
+.cls_Cart:hover a
+{
+color:#F00;
+}
+.cls_Cart:hover span
+{
+color:#61A743;
+}
+
+.top-cuisine-grid {
+	width: auto;
+	float: left;
+	margin:0 1% 2% 0;
+}
+
+
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position:absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+
+.cartonmainpage thead, tbody { display: block; }
+
+.cartonmainpage tbody {
+    height: 150px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+.cartonmainpage tbody tr td{
+  /*background-color:blue;*/
+}
+
+
